@@ -1,0 +1,42 @@
+.project_grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  font-family: $font_text;
+  background-color: $color_black_lighter;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 5% 1fr 0.2fr 5%;
+  grid-row: auto 1fr;
+  padding: 20px 0;
+  grid-template-areas:
+    ". title title ."
+    ". main submain .";
+}
+
+.project h1 {
+  grid-area: title;
+  padding-bottom: 20px;
+  color: $color_green;
+}
+
+.project_main {
+  grid-area: main;
+  width: 100%;
+  height: 100%;
+  padding-right: 20px;
+}
+
+.project_main_image {
+  width: 100%;
+  height: calc(100vh - 200px);
+  object-fit: cover;
+}
+.project_submain {
+  grid-area: submain;
+}
+.project_submain_image {
+  width: 100%;
+  height: 200px;
+}

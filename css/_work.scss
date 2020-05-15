@@ -1,0 +1,108 @@
+.work_grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  font-family: $font_text;
+  background-color: $color_black_lighter;
+}
+
+.work {
+  padding-top: 8vh;
+}
+
+.work_container h1 {
+  text-align: center;
+  padding-bottom: 20px;
+  color: $color_green;
+  font-family: $font-text;
+  font-size: 2rem;
+  text-decoration: underline;
+}
+
+.proyects_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 280px);
+  grid-gap: 10px;
+  padding: 0 calc(5% + 20px);
+  justify-content: center;
+}
+
+.proyect {
+  position: relative;
+}
+
+.proyect img {
+  width: 100%;
+  border-radius: 4px;
+  margin: 0;
+}
+
+.proyect_overlay {
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: $color_white;
+}
+
+.proyect_overlay-cirle {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  background-color: $color_green;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $color_black;
+}
+
+.proyect_overlay-cirle p {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.proyect:hover .proyect_overlay {
+  display: flex;
+}
+
+@media (max-width: 1024px) {
+  .work_container h1 {
+    font-size: 1.2rem;
+  }
+
+  .proyects_grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .work {
+    padding: 0;
+    padding-top: calc(10% + 20px);
+  }
+  .work-grid {
+    display: block;
+  }
+  .proyects_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 481px) {
+  .work_container h1 {
+    font-size: 1.2rem;
+    padding: 0 20px 20px;
+  }
+  .proyects_grid {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+}

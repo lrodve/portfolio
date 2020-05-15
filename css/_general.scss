@@ -1,0 +1,22 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
+$color_black: #171819;
+$color_black_lighter: #181a1b; 
+$color_white: #EEEEEE;
+$color_green: #08fdd8;
+$color_gray-form: #292b2d;
+
+$font-title: 'Nunito', cursive;
+$font_text: 'Nunito', system-ui;
+
+.color-green{
+    color: $color_green;
+}

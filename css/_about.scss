@@ -1,0 +1,83 @@
+.about_grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  font-family: $font_text;
+  background-color: $color_black_lighter;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 5% 1fr 1fr 5%;
+  background-color: $color_black_lighter;
+  color: $color_white;
+
+  .about_description {
+    padding: 20px;
+    grid-column: 2/3;
+    align-self: center;
+    h1 {
+      padding-bottom: 20px;
+      color: $color_green;
+      font-family: $font-text;
+      font-size: 2rem;
+      text-decoration: underline;
+    }
+    p {
+      text-align: justify;
+      padding-bottom: 15px;
+    }
+  }
+  .about_skills {
+    align-self: center;
+    margin: 0 20px;
+
+    .about_skills_container {
+      background-color: white;
+      border-radius: 4px;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+      align-items: center;
+      justify-items: center;
+      grid-gap: 20px;
+
+      .about_skils_img {
+        width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .about {
+    margin: 0 5%;
+    .about_description {
+      h1 {
+        font-size: 1.2rem;
+      }
+    }
+    .about_skills {
+      .about_skills_container {
+        grid-gap: 10px;
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+
+    .about_description {
+      padding: 0;
+      padding-top: calc(10% + 20px);
+    }
+
+    .about_skills {
+      margin: 0;
+      .about_skills_container {
+        grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+      }
+    }
+  }
+}
